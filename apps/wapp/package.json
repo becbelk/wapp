@@ -1,0 +1,79 @@
+{
+  "name": "@wapp/wapp",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "wapp",
+    "targets": {
+      "build": {
+        "executor": "@nx/esbuild:esbuild",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "defaultConfiguration": "production",
+        "options": {
+          "platform": "node",
+          "outputPath": "apps/wapp/dist",
+          "format": [
+            "cjs"
+          ],
+          "bundle": false,
+          "main": "apps/wapp/src/main.ts",
+          "tsConfig": "apps/wapp/tsconfig.app.json",
+          "assets": [
+            "apps/wapp/src/assets"
+          ],
+          "esbuildOptions": {
+            "sourcemap": true,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        },
+        "configurations": {
+          "development": {},
+          "production": {
+            "generateLockfile": true,
+            "esbuildOptions": {
+              "sourcemap": false,
+              "outExtension": {
+                ".js": ".js"
+              }
+            }
+          }
+        }
+      },
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "wapp:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "wapp:build:development"
+          },
+          "production": {
+            "buildTarget": "wapp:build:production"
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      },
+      "docker-build": {
+        "dependsOn": [
+          "build"
+        ],
+        "command": "docker build -f apps/wapp/Dockerfile . -t wapp"
+      }
+    }
+  }
+}
