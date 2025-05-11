@@ -1,0 +1,21 @@
+# #! this is for [consumption_service]
+# post http://localhost:4003/consumption/insert
+# Content-Type: application/json
+
+# {
+#   "watermeter": "13-13-zzz112",
+#   "periode": "string",
+#   "oldConsumption": 0,
+#   "newConsumption": 100,
+#   "updates": [],
+#   "dataHash": "string"
+# }
+ delete http://localhost:4003/consumption/delete-one?
+# put http://localhost:4003/consumption/update?watermeter=13-13-zzz112
+# Content-Type: application/json
+
+# {
+#   "periode": "2024_0",
+#   "oldConsumption": 0,
+#   "newConsumption": 120
+# }

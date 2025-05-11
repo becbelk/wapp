@@ -1,0 +1,37 @@
+
+#! this for [auth_service]
+# POST http://localhost:4000/auth/logout
+# Content-Type: application/json
+
+# {
+#   "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJlbGthY2VtIiwiaWF0IjoxNzQ2NDQ5NjIwLCJleHAiOjE3NDczMTM2MjB9.wp83ZAXJAkICaOyF7Ah9GfBlejNZ_JoE6-rAqugbuSM"
+# }
+
+
+# POST http://localhost:4000/auth/register
+# Content-Type: application/json
+
+# {
+#   "username":"belkacem",
+#   "password":"123456",
+#   "role":200
+# }
+
+# POST http://localhost:4000/auth/login
+# Content-Type: application/json
+
+# {
+#   "username":"belkacem",
+#     "password":"123456"
+# }
+
+
+# post http://localhost:4000/auth/refresh
+# Content-Type: application/json
+
+# {
+#   "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJlbGthY2VtIiwiaWF0IjoxNzQ2NDQ0NTg5LCJleHAiOjE3NDczMDg1ODl9.dsKgMiIoETPYl88Xi4b_bnYADEqTodI4lHZCOWU7rHo"
+# }
+
+# get http://localhost:4000/auth/has-authority?role=200&operation=print
+

@@ -41,7 +41,17 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/wapp-e2e/**/*"]
+      "exclude": ["apps/wapp-e2e/**/*", "gateway-e2e/**/*"]
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
     }
   ],
   "targetDefaults": {

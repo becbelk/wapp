@@ -8,6 +8,24 @@
     },
     {
       "path": "./apps/wapp"
+    },
+    {
+      "path": "./auth"
+    },
+    {
+      "path": "./consumer"
+    },
+    {
+      "path": "./consumption"
+    },
+    {
+      "path": "./bill"
+    },
+    {
+      "path": "./gateway-e2e"
+    },
+    {
+      "path": "./gateway"
     }
   ]
 }

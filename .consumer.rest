@@ -1,0 +1,18 @@
+
+# #! this is for [consume_service]
+# post http://localhost:4002/consumer-service/insert-one
+# Content-Type: application/json
+
+# { 
+#     "no":"000-11",
+#     "name":"bechina belkacem 11",
+#     "address":"chennaoura",
+#     "watermeter":"13-13-112" 
+# }
+# delete http://localhost:4002/consumer/delete-one/000-12
+# post http://localhost:4002/consumer-service/update-one/000-17
+# Content-Type: application/json
+
+# { 
+#     "name":"bechina belkacem 12-&&&"
+# }
