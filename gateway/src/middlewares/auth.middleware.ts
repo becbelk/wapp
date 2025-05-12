@@ -26,7 +26,7 @@ const auth = async (req: Request, res: Response, next: NextFunction) => {
     }
 
     return res.status(401).json({ error: 'Unauthorized' });
-  } catch (error) {
+  } catch (error: any) {
     console.error('[AUTH MIDDLEWARE] Auth failed:', error.message);
     return res.status(401).json({ error: 'Invalid token or auth error' });
   }
