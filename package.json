@@ -64,6 +64,7 @@
     "consumption",
     "bill",
     "gateway",
-    "gateway-e2e"
+    "gateway-e2e",
+    "shared-dtos"
   ]
 }
