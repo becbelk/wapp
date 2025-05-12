@@ -10,25 +10,25 @@
       "path": "./apps/wapp"
     },
     {
-      "path": "./auth"
+      "path": "./auth-service"
     },
     {
-      "path": "./consumer"
+      "path": "./consumer-service"
     },
     {
-      "path": "./consumption"
+      "path": "./consumption-service"
     },
     {
-      "path": "./bill"
+      "path": "./bill-service"
     },
     {
-      "path": "./gateway-e2e"
-    },
-    {
-      "path": "./gateway"
+      "path": "./gateway-service"
     },
     {
       "path": "./shared-dtos"
+    },
+    {
+      "path": "./apps"
     }
   ]
 }
